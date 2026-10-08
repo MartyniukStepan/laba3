@@ -86,13 +86,15 @@ def buy():
 
     print("До оплати:", f"{total:.2f} грн")
 
-    answer = input("Купити товари? (так/ні): ")
+    answer = input("Купити товари? (yes/no): ")
 
-    if answer == "так":
+    if answer == "yes":
         cart.clear()
         print("Покупку успішно здійснено!")
-    else:
+    elif answer == "no":
         print("Покупку скасовано.")
+    else:
+        print("Помилка")
 
 
 def admin():
